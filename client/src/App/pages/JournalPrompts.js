@@ -12,26 +12,63 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 class JournalPrompts extends React.Component {
 	
-	 constructor(props) {
+  constructor(props) {
     super(props);
+
+    this.onChangePrompt = this.onChangePrompt.bind(this);
+    this.onChangeResponse = this.onChangeResponse.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
       prompt: 'p1',
-	  essay: 'essay goes here',
-    };
-	
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+      response: 'essay goes here',
+    }
+  }
+  
+  
+    onChangeUsername(e) {
+    this.setState({
+      username: e.target.value
+    })
   }
 
-  handleChange(event) {
-    this.setState({ [event.target.name]: event.target.value });
+  onChangeDescription(e) {
+    this.setState({
+      description: e.target.value
+    })
   }
 
-  handleSubmit(event) {
-    alert('Prompt: ' + this.state.prompt + 'Essay: ' + this.state.essay);
-    event.preventDefault();
+  onChangeDuration(e) {
+    this.setState({
+      duration: e.target.value
+    })
   }
+
+  onChangeDate(date) {
+    this.setState({
+      date: date
+    })
+  }
+
+  onSubmit(e) {
+    e.preventDefault();
+
+    const exercise = {
+      prompt: this.state.prompt,
+      response: this.state.response,
+    }
+
+    console.log(exercise);
+
+    axios.post('https://t2serve.herokuapp.com/entries/add', exercise)
+      .then(res => console.log(res.data));
+
+    window.location = '/';
+  }
+  
+  
+  
+
 			
 	
 	render() {
