@@ -17,7 +17,7 @@ class JournalPrompts extends React.Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      prompt: 'p1',
+      prompt: 'p0',
       response: 'essay goes here',
     }
   }
@@ -71,27 +71,31 @@ class JournalPrompts extends React.Component {
 		
           <select name="prompt" value={this.state.prompt} onChange={this.onChangePrompt}>
             
-			<option value="p1">
+			<option value = "p0">
+				Please Select A Prompt:
+			</option>
+			
+			<option value="Describe something that happened in the last week you have strong feelings about. What happened? What did you do in response?">
 				Describe something that happened in the last week you have strong feelings about. What happened? What did you do in response?
 			</option>
 			
-            <option value="p2">
-				Describe a goal you have for the next [time frame]. What steps do you need to take in order to achieve it? How can you start to do so now?
+            <option value="Describe a goal you have for the next three months. What steps do you need to take in order to achieve it? How can you start to do so now?">
+				Describe a goal you have for the next three months. What steps do you need to take in order to achieve it? How can you start to do so now?
 			</option>
 			
-            <option value="p3">
+            <option value="Write about a song you have been listening to a lot recently. Why do you think you are drawn to it?">
 				Write about a song you have been listening to a lot recently. Why do you think you are drawn to it?
 			</option>
 			
-            <option value="p4">
+            <option value="What is the last dream you had that you remember?">
 				What is the last dream you had that you remember?
 			</option>
 			
-			<option value="p5">
+			<option value="Describe something you're looking forward to this week:">
 				Describe something you're looking forward to this week:
 			</option>
 			
-			<option value="p6">
+			<option value="Think about the last time you had strong conflict with someone. What did you do to resolve it? What did you learn from that experience for the next time a similar situation occurs?">
 				Think about the last time you had strong conflict with someone. What did you do to resolve it? What did you learn from that experience for the next time a similar situation occurs?
 			</option>
           

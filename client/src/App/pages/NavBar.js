@@ -40,11 +40,18 @@ class NavBar extends React.Component {
 
                 <Menu.Item
                     as={NavLink}
-                    to="/MySpace"
-                    name="My Journal and Meditation SPLIT THESE"
-                    active={activeItem === 'MySpace'}
+                    to="/JournalHome"
+                    name="My Journal"
+                    active={activeItem === 'My Journal'}
                     onClick={this.handleItemClick}
                 />
+				<Menu.Item
+					as={NavLink}
+					to"/MeditationPage"
+					name="Guided Meditation"
+					active={activeItem === 'Guided Meditation'}
+					onClick={this.handleItemClick}
+				/>
                 <Menu.Item
                     as={NavLink}
                     to="/resources"

@@ -8,7 +8,7 @@ class MySpace extends Component {
     render() {
         return (
             <div className="App">
-                <h1>My Personal Space</h1>
+                <h1>My Journal Home</h1>
 
                 <div>
 				{/* Link to List.js */}
