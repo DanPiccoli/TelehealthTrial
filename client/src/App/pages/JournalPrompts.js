@@ -49,7 +49,7 @@ class JournalPrompts extends React.Component {
     axios.post('https://t2serve.herokuapp.com/entries/add', entry)
       .then(res => console.log(res.data));
 
-    window.location = '/';
+    window.location = '/JournalPast';
   }
   
   
