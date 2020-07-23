@@ -39,23 +39,46 @@ class NavBar extends React.Component {
                         active={activeItem === 'CommunityHome'}
                         onClick={this.handleItemClick}
                     />
-
-                    <Menu.Item
-                        as={NavLink}
-                        to="/MySpace"
-                        name="My Journal and Meditation SPLIT THESE"
-                        active={activeItem === 'MySpace'}
-                        onClick={this.handleItemClick}
-                    />
-                    <Menu.Item
-                        as={NavLink}
-                        to="/resources"
-                        name="All Resources"
-                        active={activeItem === 'ResourceList'}
-                        onClick={this.handleItemClick}
-                    />
-                </Menu>
-            </div>
+          
+                <Menu.Item
+                    as={NavLink}
+                    to="/JournalHome"
+                    name="My Journal"
+                    active={activeItem === 'My Journal'}
+                    onClick={this.handleItemClick}
+                />
+				<Menu.Item
+					as={NavLink}
+					to = "/MeditationPage"
+					name="Guided Meditation"
+					active={activeItem === 'Guided Meditation'}
+					onClick={this.handleItemClick}
+				/>
+                <Menu.Item
+                    as={NavLink}
+                    to="/resources"
+                    name="All Resources"
+                    active={activeItem === 'ResourceList'}
+                    onClick={this.handleItemClick}
+                />
+				
+				<Menu.Item
+                    as={NavLink}
+                    to="/create"
+                    name="Create Exercise"
+                    active={activeItem === 'CreateExercise'}
+                    onClick={this.handleItemClick}
+                />
+				
+				<Menu.Item
+                    as={NavLink}
+                    to="/exerciselist"
+                    name="Exercise List"
+                    active={activeItem === 'ExercisesList'}
+                    onClick={this.handleItemClick}
+                />
+				
+            </Menu>
         );
     }
 }
