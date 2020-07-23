@@ -67,7 +67,7 @@ class JournalPrompts extends React.Component {
 		<div>
         <label>
 		
-		<form onSubmit={this.onSubmit}>
+		
 		
           <select name="prompt" value={this.state.prompt} onChange={this.onChangePrompt}>
             
@@ -105,7 +105,7 @@ class JournalPrompts extends React.Component {
 	  
 	  <div>
 	  
-	  
+	  <form onSubmit={this.onSubmit}>
         <label>
 		<div>
           Essay:
