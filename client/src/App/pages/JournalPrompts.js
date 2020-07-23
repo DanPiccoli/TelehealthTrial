@@ -148,7 +148,7 @@ class JournalPrompts extends React.Component {
 
 	
 	<div>
-		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response.
+		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response. You may want to copy your response to your clipboard in case there is a submission error.
 	</div>
 	
 
