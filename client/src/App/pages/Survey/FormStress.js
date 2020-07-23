@@ -33,7 +33,7 @@ class FormStress extends React.Component {
             this.props.history.push('/covid-routine-resources');
         } else {
             // finances
-            this.props.history.push('/sleep-resources');
+            this.props.history.push('/financial-resources');
         }
     };
 
