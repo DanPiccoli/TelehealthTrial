@@ -3,6 +3,7 @@
 import React from 'react';
 import { Menu } from 'semantic-ui-react';
 import { NavLink, withRouter } from 'react-router-dom';
+import TranquilLogoRect from './TranquilLogoRect.png';
 
 class NavBar extends React.Component {
     state = {};
@@ -15,61 +16,46 @@ class NavBar extends React.Component {
         const { activeItem } = this.state;
 
         return (
-            <Menu secondary pointing>
-                <Menu.Item
-                    as={NavLink}
-                    to="/"
-                    name="Home"
-                    active={activeItem === 'Home'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                    as={NavLink}
-                    to="/survey"
-                    name="Student Resource Matcher"
-                    active={activeItem === 'StudentSurvey'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                    as={NavLink}
-                    to="/community"
-                    name="CommunityHome"
-                    active={activeItem === 'CommunityHome'}
-                    onClick={this.handleItemClick}
-                />
+            <div>
+                <Menu secondary pointing>
+                    <Menu.Item
+                        as={NavLink}
+                        to="/"
+                        name="Home"
+                        active={activeItem === 'Home'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        as={NavLink}
+                        to="/survey"
+                        name="Student Resource Matcher"
+                        active={activeItem === 'StudentSurvey'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        as={NavLink}
+                        to="/community"
+                        name="CommunityHome"
+                        active={activeItem === 'CommunityHome'}
+                        onClick={this.handleItemClick}
+                    />
 
-                <Menu.Item
-                    as={NavLink}
-                    to="/MySpace"
-                    name="My Journal and Meditation SPLIT THESE"
-                    active={activeItem === 'MySpace'}
-                    onClick={this.handleItemClick}
-                />
-                <Menu.Item
-                    as={NavLink}
-                    to="/resources"
-                    name="All Resources"
-                    active={activeItem === 'ResourceList'}
-                    onClick={this.handleItemClick}
-                />
-				
-				<Menu.Item
-                    as={NavLink}
-                    to="/create"
-                    name="Create Exercise"
-                    active={activeItem === 'CreateExercise'}
-                    onClick={this.handleItemClick}
-                />
-				
-				<Menu.Item
-                    as={NavLink}
-                    to="/exerciselist"
-                    name="Exercise List"
-                    active={activeItem === 'ExercisesList'}
-                    onClick={this.handleItemClick}
-                />
-				
-            </Menu>
+                    <Menu.Item
+                        as={NavLink}
+                        to="/MySpace"
+                        name="My Journal and Meditation SPLIT THESE"
+                        active={activeItem === 'MySpace'}
+                        onClick={this.handleItemClick}
+                    />
+                    <Menu.Item
+                        as={NavLink}
+                        to="/resources"
+                        name="All Resources"
+                        active={activeItem === 'ResourceList'}
+                        onClick={this.handleItemClick}
+                    />
+                </Menu>
+            </div>
         );
     }
 }
