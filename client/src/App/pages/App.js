@@ -10,7 +10,6 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // Component Imports
 import NavBar from './NavBar';
 import Home from './Home';
-import List from './List';
 import CommunityHome from './CommunityHome';
 
 import MySpace from './MySpace';
@@ -50,7 +49,6 @@ class App extends Component {
                 <BrowserRouter>
                     <NavBar />
                     <Route exact path="/" component={Home} />
-                    <Route path="/list" component={List} />
                     <Route path="/survey" component={StudentSurvey} />
                     <Route path="/stressor-survey" component={FormStress} />
                     <Route path="/covid-routine-resources" component={CovidRoutineInfo} />
