@@ -47,7 +47,7 @@ class NavBar extends React.Component {
                 />
 				<Menu.Item
 					as={NavLink}
-					to"/MeditationPage"
+					to = "/MeditationPage"
 					name="Guided Meditation"
 					active={activeItem === 'Guided Meditation'}
 					onClick={this.handleItemClick}
