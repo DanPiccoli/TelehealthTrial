@@ -124,13 +124,8 @@ class JournalPrompts extends React.Component {
           Essay:
 		</div>
           <textarea rows="6" cols="70" name="essay" value={this.state.response} onChange={this.onChangeResponse} />
-        </label>
-		
-	  </form>
-	  
-	</div>
-	
-	<label>Date: </label>
+        
+			<label>Date: </label>
           <div>
             <DatePicker
               selected={this.state.date}
@@ -138,9 +133,19 @@ class JournalPrompts extends React.Component {
             />
           </div>
 		  
-		  <div>
+		<div>
         <input type="submit" value="Submit" />
 		</div>
+		
+		</label>
+		
+	  </form>
+	  
+	</div>
+	
+
+		  
+
 	
 	<div>
 		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response.
