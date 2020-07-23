@@ -121,10 +121,10 @@ class JournalPrompts extends React.Component {
 	  <form onSubmit={this.onSubmit}>
         <label>
 		<div>
-          Essay:
+          Response:
 		</div>
-          <textarea rows="6" cols="70" name="essay" value={this.state.response} onChange={this.onChangeResponse} />
-        
+          <textarea rows="10" cols="100" name="essay" value={this.state.response} onChange={this.onChangeResponse} />
+        <div>
 			<label>Date: </label>
           <div>
             <DatePicker
@@ -132,7 +132,7 @@ class JournalPrompts extends React.Component {
               onChange={this.onChangeDate}
             />
           </div>
-		  
+		  </div>
 		<div>
         <input type="submit" value="Submit" />
 		</div>
