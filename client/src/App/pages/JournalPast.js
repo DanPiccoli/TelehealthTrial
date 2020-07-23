@@ -12,7 +12,7 @@ const Entry = props => (
   <tr>
     <td>{props.entry.prompt}</td>
     <td>{props.entry.response}</td>
-	<td>{props.exercise.date.substring(0,10)}</td>
+	<td>{props.entry.date.substring(0,10)}</td>
   </tr>
 )
 
