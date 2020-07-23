@@ -7,6 +7,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Header } from 'semantic-ui-react';
+import Logo2Rect from './Logo2Rect.jpg';
 
 class ResourceList extends React.Component {
     render() {
@@ -69,6 +70,13 @@ class ResourceList extends React.Component {
                 </div>
                 <div className="ui container row">
                     <div className="column six wide center aligned ">
+                        <Link to={'./exercise-resources'}>
+                            <button className="big ui button">Exercise Resources</button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
                         <Link to={'./mentor-program'}>
                             <button className="big ui button">Mentor Program</button>
                         </Link>
@@ -89,11 +97,7 @@ class ResourceList extends React.Component {
                     </div>
                 </div>
                 <div className="ui container row">
-                    <div className="column six wide center aligned ">
-                        <Link to={'./exercise-resources'}>
-                            <button className="big ui button">Exercise Resources</button>
-                        </Link>
-                    </div>
+                    <img className="ui small image" src={Logo2Rect} alt="Logo" />
                 </div>
             </div>
         );

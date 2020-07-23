@@ -7,6 +7,7 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Header } from 'semantic-ui-react';
+import Logo2Rect from '../Logo2Rect.jpg';
 
 import './Survey.css';
 
@@ -48,6 +49,9 @@ class StudentSurvey extends React.Component {
                             </button>
                         </Link>
                     </div>
+                </div>
+                <div className="ui container row">
+                    <img className="ui small image" src={Logo2Rect} alt="Logo" />
                 </div>
             </div>
         );
