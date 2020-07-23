@@ -3,12 +3,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
-
-
-
-
-
-//alert('Prompt Two!');
+import axios from 'axios';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
 
 class JournalPrompts extends React.Component {
 	
@@ -26,41 +23,30 @@ class JournalPrompts extends React.Component {
   }
   
   
-    onChangeUsername(e) {
+    onChangePrompt(e) {
     this.setState({
-      username: e.target.value
+      prompt: e.target.value
     })
   }
 
-  onChangeDescription(e) {
+  onChangeResponse(e) {
     this.setState({
-      description: e.target.value
+      response: e.target.value
     })
   }
 
-  onChangeDuration(e) {
-    this.setState({
-      duration: e.target.value
-    })
-  }
-
-  onChangeDate(date) {
-    this.setState({
-      date: date
-    })
-  }
 
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
+    const entry = {
       prompt: this.state.prompt,
       response: this.state.response,
     }
 
-    console.log(exercise);
+    console.log(entry);
 
-    axios.post('https://t2serve.herokuapp.com/entries/add', exercise)
+    axios.post('https://t2serve.herokuapp.com/entries/add', entry)
       .then(res => console.log(res.data));
 
     window.location = '/';
@@ -81,7 +67,9 @@ class JournalPrompts extends React.Component {
 		<div>
         <label>
 		
-          <select name="prompt" value={this.state.prompt} onChange={this.handleChange}>
+		<form onSubmit={this.onSubmit}>
+		
+          <select name="prompt" value={this.state.prompt} onChange={this.onChangePrompt}>
             
 			<option value="p1">
 				Describe something that happened in the last week you have strong feelings about. What happened? What did you do in response?
@@ -117,12 +105,12 @@ class JournalPrompts extends React.Component {
 	  
 	  <div>
 	  
-	  <form onSubmit={this.handleSubmit}>
+	  
         <label>
 		<div>
           Essay:
 		</div>
-          <textarea rows="6" cols="70" name="essay" value={this.state.essay} onChange={this.handleChange} />
+          <textarea rows="6" cols="70" name="essay" value={this.state.response} onChange={this.onChangeResponse} />
         </label>
 		<div>
         <input type="submit" value="Submit" />
