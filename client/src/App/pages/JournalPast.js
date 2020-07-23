@@ -42,24 +42,23 @@ class JournalPast extends React.Component {
   }
 	
     render() {
-        return(
-		
-		 <div>
-        <h3>Logged Entries</h3>
+        return (
+		<div>
+        <h3>Logged Exercises</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Prompt</th>
-              <th>Response</th>
-			  <th>Date</th>
+              <th>Username</th>
+              <th>Description</th>
+              <th>Date</th>
             </tr>
           </thead>
           <tbody>
-            { this.entryList() }
+            { this.exerciseList() }
           </tbody>
         </table>
       </div>
-	  )
+    )
 		
     }
 }
