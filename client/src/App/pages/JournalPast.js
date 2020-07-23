@@ -44,7 +44,7 @@ class JournalPast extends React.Component {
     render() {
         return (
 		<div>
-        <h3>Logged Exercises</h3>
+        <h3>Logged Entries</h3>
         <table className="table">
           <thead className="thead-light">
             <tr>
@@ -54,7 +54,7 @@ class JournalPast extends React.Component {
             </tr>
           </thead>
           <tbody>
-            { this.exerciseList() }
+            { this.entryList() }
           </tbody>
         </table>
       </div>
