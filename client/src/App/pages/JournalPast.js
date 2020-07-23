@@ -12,6 +12,7 @@ const Entry = props => (
   <tr>
     <td>{props.entry.prompt}</td>
     <td>{props.entry.response}</td>
+	<td>{props.exercise.date.substring(0,10)}</td>
   </tr>
 )
 
@@ -48,10 +49,12 @@ class JournalPast extends React.Component {
         <table className="table">
 			<col width="40px" />
 			<col width="40px" />
+			<col width= "20px" />
           <thead className="thead-light">
             <tr>
               <th>Prompt</th>
               <th>Response</th>
+			  <th>Date</th>
             </tr>
           </thead>
           <tbody>

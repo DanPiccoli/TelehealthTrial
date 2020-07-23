@@ -19,6 +19,7 @@ class JournalPrompts extends React.Component {
     this.state = {
       prompt: 'p0',
       response: 'essay goes here',
+	  date: new Date(),
     }
   }
   
@@ -32,6 +33,12 @@ class JournalPrompts extends React.Component {
   onChangeResponse(e) {
     this.setState({
       response: e.target.value
+    })
+  }
+  
+    onChangeDate(date) {
+    this.setState({
+      date: date
     })
   }
 
@@ -122,6 +129,14 @@ class JournalPrompts extends React.Component {
 	  </form>
 	  
 	</div>
+	
+	<label>Date: </label>
+          <div>
+            <DatePicker
+              selected={this.state.date}
+              onChange={this.onChangeDate}
+            />
+          </div>
 	
 	<div>
 		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response.
