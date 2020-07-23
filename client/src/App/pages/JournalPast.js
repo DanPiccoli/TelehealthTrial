@@ -46,8 +46,8 @@ class JournalPast extends React.Component {
 		 <div>
         <h3>Logged Entries</h3>
         <table className="table">
-			<col width="20px" />
-			<col width="20px" />
+			<col width="40px" />
+			<col width="40px" />
           <thead className="thead-light">
             <tr>
               <th>Prompt</th>
