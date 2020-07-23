@@ -121,16 +121,14 @@ class JournalPrompts extends React.Component {
 		</div>
 	  </form>
 	  
-	  </div>
-		
+	</div>
+	
+	<div>
+		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response.
+	</div>
+	
 
-		
-		
-		
-		
-		
-		
-			</div>
+	</div>
 			
 		);
 	}
