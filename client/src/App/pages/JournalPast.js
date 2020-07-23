@@ -36,7 +36,7 @@ class JournalPast extends React.Component {
   
   entryList() {
     return this.state.entries.map(currententry => {
-      return <Entry entry={currententry} key={currentexercise._id}/>;
+      return <Entry entry={currententry} key={currententry._id}/>;
     })
   }
 	
