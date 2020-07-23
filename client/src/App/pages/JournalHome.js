@@ -9,22 +9,30 @@ class JournalHome extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Journal Home</h1>
-
-			<div>
-                {/* Link to List.js */}
-                <Link to={'./JournalPrompts'}>
-                    <button className="big ui button">Create New Entry</button>
-                </Link>
-			</div>
+			 <div className="ui container padded centered stackable grid">
+                <div className="ui container row ten wide">
+                    <Header className="ui huge header">Journal Homepage</Header>
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
+                        <Link to={'./JournalPrompts'}>
+                            <button className="big red ui button">
+                                Create New Entry
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="ui container row">
+                    <div className="column six wide center aligned ">
+                        <Link to={'./JournalPast'}>
+                            <button className="big ui button">
+                                Read Old Entries
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
 			
-			<div>
-				{/* Link to List.js */}
-                <Link to={'./JournalPast'}>
-                    <button className="big ui button">Read Old Entries</button>
-                </Link>
-			</div>
-				
             </div>
         );
     }
