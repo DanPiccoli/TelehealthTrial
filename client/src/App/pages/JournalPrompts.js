@@ -14,6 +14,7 @@ class JournalPrompts extends React.Component {
 
     this.onChangePrompt = this.onChangePrompt.bind(this);
     this.onChangeResponse = this.onChangeResponse.bind(this);
+	this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
@@ -49,6 +50,7 @@ class JournalPrompts extends React.Component {
     const entry = {
       prompt: this.state.prompt,
       response: this.state.response,
+	  date: this.state.date
     }
 
     console.log(entry);
@@ -123,9 +125,7 @@ class JournalPrompts extends React.Component {
 		</div>
           <textarea rows="6" cols="70" name="essay" value={this.state.response} onChange={this.onChangeResponse} />
         </label>
-		<div>
-        <input type="submit" value="Submit" />
-		</div>
+		
 	  </form>
 	  
 	</div>
@@ -137,6 +137,10 @@ class JournalPrompts extends React.Component {
               onChange={this.onChangeDate}
             />
           </div>
+		  
+		  <div>
+        <input type="submit" value="Submit" />
+		</div>
 	
 	<div>
 		Note: After typing your response, you must click outside of the text box before pressing submit in order to save your response.
