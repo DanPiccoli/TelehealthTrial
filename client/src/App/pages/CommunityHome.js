@@ -6,12 +6,20 @@
 
 import React from 'react';
 import { Component } from 'react';
+import wireframe from './wireframe.png';
 
 const { render } = require('react-dom');
 
 class CommunityHome extends React.Component {
     render() {
-        return <div>Community Home</div>;
+	return(
+        <div>
+			<div className="ui container row">
+				<img className="ui massive image" src={wireframe} alt="wireframe" />
+			</div>
+			<div>This is a wireframe</div>
+		</div>
+		);
     }
 }
 
