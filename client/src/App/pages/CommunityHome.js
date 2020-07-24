@@ -6,7 +6,6 @@
 
 import React from 'react';
 import { Component } from 'react';
-<<<<<<< HEAD
 import { Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
