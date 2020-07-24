@@ -12,6 +12,8 @@ import NavBar from './NavBar';
 
 import Home from './Home';
 import CommunityHome from './CommunityHome';
+import CommunityGroupL from './CommunityGroupL';
+import CommunityGroupM from './CommunityGroupM';
 
 import MySpace from './MySpace';
 import MeditationPage from './MeditationPage';
@@ -68,6 +70,8 @@ class App extends Component {
                     <Route path="/exercise-resources" component={ExerciseInfo} />
                     <Route path="/survey-stress-yn" component={FormStressTired} />
                     <Route path="/community" component={CommunityHome} />
+                    <Route path="/communityL" component={CommunityGroupL} />
+                    <Route path="/communityM" component={CommunityGroupM} />
                     <Route path="/MySpace" component={MySpace} />
                     <Route path="/MeditationPage" component={MeditationPage} />
                     <Route path="/JournalHome" component={JournalHome} />

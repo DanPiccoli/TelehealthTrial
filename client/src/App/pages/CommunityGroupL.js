@@ -12,12 +12,12 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 const { render } = require('react-dom');
 
-class CommunityHome extends React.Component {
+class CommunityGroupL extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            group:'Stress',
+            group:'Loneliness',
             name: '',
             message: ''
         };
@@ -71,15 +71,15 @@ class CommunityHome extends React.Component {
                     <a class="item">
                     Menu
                     </a>
-                    <a class="item" onClick={this.handleClick}>
-                    <b><u>Stress Group</u></b>
-                    </a>
-                    <Link to={'./communityL'}>
-                        <a class="item">
-                        Loneliness Group
+                    <Link to={'./community'}>
+                        <a class="item" onClick={this.handleClick}>
+                        Stress Group
                         </a>
                     </Link>
-                    <Link to={'./CommunityM'}>
+                    <a class="item">
+                    <b><u>Loneliness Group</u></b>
+                    </a>
+                    <Link to={'./communityM'}>
                         <a class="item">
                         Motivation Group
                         </a>
@@ -96,7 +96,7 @@ class CommunityHome extends React.Component {
                         <h2 className="ui header">
                         <div className="content">
                                 <br></br>
-                                Current Group: Stress
+                                Current Group: Loneliness
                             </div>
                         </h2>
                     </div>
@@ -136,4 +136,4 @@ class CommunityHome extends React.Component {
     }
 }
 
-export default CommunityHome;
+export default CommunityGroupL;

@@ -12,41 +12,31 @@ import { NavLink, withRouter } from 'react-router-dom';
 
 const { render } = require('react-dom');
 
-class CommunityHome extends React.Component {
+class CommunityGroupM extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            group:'Stress',
+            group:'Motivation',
             name: '',
             message: ''
         };
 
         this.handleClickStress = this.handleClickStress.bind(this);
         this.handleClickLoneliness = this.handleClickLoneliness.bind(this);
-        this.handleClickMotivation = this.handleClickMotivation.bind(this);
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleChangeMessage = this.handleChangeMessage.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleClickStress(event) {
-        this.state({
-            group:'Stress'
-        });
+
     }
 
     handleClickLoneliness(event) {
-        this.state({
-            group:'Loneliness'
-        });
+ 
     }
 
-    handleClickMotivation(event) {
-        this.state({
-            group:'Motivation'
-        });
-    }
 
     handleChangeName(event) {
         this.setState({
@@ -71,19 +61,19 @@ class CommunityHome extends React.Component {
                     <a class="item">
                     Menu
                     </a>
-                    <a class="item" onClick={this.handleClick}>
-                    <b><u>Stress Group</u></b>
-                    </a>
+                    <Link to={'./community'}>
+                        <a class="item" onClick={this.handleClick}>
+                        Stress Group
+                        </a>
+                    </Link>
                     <Link to={'./communityL'}>
                         <a class="item">
                         Loneliness Group
                         </a>
                     </Link>
-                    <Link to={'./CommunityM'}>
-                        <a class="item">
-                        Motivation Group
-                        </a>
-                    </Link>
+                    <a class="item">
+                    <b><u>Motivation Group</u></b>
+                    </a>
                 </div>
                 <div class="ui center aligned container">
                     <div className="ui container row">
@@ -96,7 +86,7 @@ class CommunityHome extends React.Component {
                         <h2 className="ui header">
                         <div className="content">
                                 <br></br>
-                                Current Group: Stress
+                                Current Group: Motivation
                             </div>
                         </h2>
                     </div>
@@ -136,4 +126,4 @@ class CommunityHome extends React.Component {
     }
 }
 
-export default CommunityHome;
+export default CommunityGroupM;
