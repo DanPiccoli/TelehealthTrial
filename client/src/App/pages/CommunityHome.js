@@ -69,7 +69,7 @@ class CommunityHome extends React.Component {
     }
 
     render() {
-<<<<<<< HEAD
+
         return (
             <div className="App">
                 <div class="ui inverted vertical labeled icon ui push left thin visible sidebar menu">
