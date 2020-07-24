@@ -6,10 +6,14 @@
 
 import React from 'react';
 import { Component } from 'react';
+<<<<<<< HEAD
 import { Grid } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { NavLink, withRouter } from 'react-router-dom';
-
+/*=======
+import wireframe from './wireframe.png';
+>>>>>>> deed60cbaec90e424f09595559130e53779e9b97
+*/
 const { render } = require('react-dom');
 
 class CommunityHome extends React.Component {
@@ -65,6 +69,7 @@ class CommunityHome extends React.Component {
     }
 
     render() {
+<<<<<<< HEAD
         return (
             <div className="App">
                 <div class="ui inverted vertical labeled icon ui push left thin visible sidebar menu">
@@ -133,6 +138,18 @@ class CommunityHome extends React.Component {
             </div>
             
         );
+
+/* ======
+	return(
+        <div>
+			<div className="ui container row">
+				<img className="ui massive image" src={wireframe} alt="wireframe" />
+			</div>
+			<div>This is a wireframe</div>
+		</div>
+		);
+>>>>>>> deed60cbaec90e424f09595559130e53779e9b97
+*/
     }
 }
 
